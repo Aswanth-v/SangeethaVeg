@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import logo from "../assets/sangeetha.jpg";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 z-50 bg-white/30 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         
-        {/* Logo */}
+      <img src={logo} alt="Sangeetha Logo" className="h-15 w-auto" />
         <h1 className="text-2xl font-bold text-text">
           Sangeetha
         </h1>
