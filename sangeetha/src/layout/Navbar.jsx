@@ -61,10 +61,10 @@ const Navbar = () => {
                   : "opacity-0 invisible translate-y-2"
               }`}
             >
-              <li className="px-4 py-2 hover:bg-primary cursor-pointer">
+              <li className="px-4 py-2 hover:bg-gray-100  cursor-pointer text-accent">
                 About Us
               </li>
-              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-accent">
                 Contact
               </li>
             </ul>
@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl text-text"
+          className="md:hidden text-2xl text-white"
         >
           {open ? "✕" : "☰"}
         </button>
@@ -87,15 +87,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white/90 backdrop-blur-lg shadow-lg transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64  backdrop-blur-lg shadow-lg transform transition-transform duration-300 md:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-6 flex flex-col gap-6 text-text text-lg mt-10">
+        <div className=" bg-black/50 p-6 flex flex-col gap-6 text-accent text-lg mt-10">
           <span className="cursor-pointer hover:text-primary">Home</span>
           <span className="cursor-pointer hover:text-primary">Order Directly</span>
-
-          {/* Mobile Dropdown */}
+          <span className="cursor-pointer hover:text-primary"> 40-year Anniversary</span>
           <div>
             <span
               onClick={() => setMoreOpen(!moreOpen)}
