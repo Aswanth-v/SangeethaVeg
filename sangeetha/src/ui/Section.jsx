@@ -1,7 +1,7 @@
-const Section = ({ children, bg = "bg-white" }) => {
+const Section = ({ children}) => {
   return (
-    <section className={`${bg} py-20`}>
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-8">
+      <div className="max-w-6xl mx-auto px-2">
         {children}
       </div>
     </section>

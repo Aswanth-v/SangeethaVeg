@@ -8,3 +8,12 @@
   --color-cream: #FFF8E1;
   --color-text: #4E342E;
 }
+body {
+  @apply min-h-screen;
+  background: linear-gradient(
+    to bottom right,
+    #FFF8E1,
+    #F5F5F5,
+    #FFFFFF
+  );
+}
