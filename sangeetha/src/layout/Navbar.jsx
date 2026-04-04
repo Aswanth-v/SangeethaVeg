@@ -38,11 +38,11 @@ const Navbar = () => {
           onClick={() => setOpen(!open)}
           className="md:hidden text-2xl text-text"
         >
-          ☰
+          {open? "X" :"☰"}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       {open && (
         <div className="md:hidden bg-white/80 backdrop-blur-md px-6 py-4 flex flex-col gap-4 text-text">
           <span className="cursor-pointer">Home</span>
