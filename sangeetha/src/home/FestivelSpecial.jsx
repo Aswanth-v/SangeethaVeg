@@ -4,21 +4,34 @@ import food from "../assets/food.jpg"
 const FestivelSpecial = () => {
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center bg-fixed flex items-center justify-center"
+      className="relative min-h-screen bg-cover bg-center bg-fixed flex flex-col md:flex-row"
       style={{ backgroundImage: `url(${food})` }}
     >
       
-      {/* Overlay for readability */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Content */}
-      <div className="relative z-10 bg-white/80 backdrop-blur-lg p-10 rounded-2xl shadow-xl text-center">
-        <h2 className="text-3xl font-bold text-text">
-          Order Festive Specials & Classic
-        </h2>
-        <p className="mt-2 text-lg text-text">
-          Sangeetha Specials directly from our kitchen 🍛
-        </p>
+      {/* Left - Content */}
+      <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center p-10">
+        <div className="text-center md:text-left">
+          <h2 className="text-3xl font-bold text-white">
+            Order Festive Specials & Classic
+          </h2>
+
+          <p className="mt-4 text-lg text-white/80">
+           🍛 Sangeetha Specials directly from our kitchen 
+          </p>
+          
+
+          <button className="mt-6 bg-gold text-black px-6 py-3 rounded-lg hover:scale-105 transition">
+            Scan for Order
+          </button>
+        </div>
+      </div>
+
+      {/* Right - Image / Content */}
+      <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center">
+        <h1 className="text-white text-4xl font-bold">hi</h1>
       </div>
 
     </div>
