@@ -3,7 +3,7 @@ import food from "../assets/food.jpg"
 const Hero = () => {
   return (
     <div
-  className="h-screen bg-cover bg-center relative"
+  className="h-screen bg-cover bg-center bg-fixed"
   style={{ backgroundImage: `url(${food})` }}
 >
   <div className="absolute inset-0 bg-black/40"></div>
