@@ -5,6 +5,8 @@ import Hero from "../home/Hero";
 import FestivelSpecial from "../home/FestivelSpecial";
 import Clasicfood from "../home/Clasicfood";
 import Services from "../home/Services";
+import DeliveryCTA from "../home/DeliveryCTA";
+import Footer from "../layout/Footer";
 const Homepage = () => {
   return (
     <div>
@@ -13,6 +15,8 @@ const Homepage = () => {
       <FestivelSpecial />
       <Clasicfood />
       <Services />
+      <DeliveryCTA/>
+     <Footer/>
     </div>
   );
 };
