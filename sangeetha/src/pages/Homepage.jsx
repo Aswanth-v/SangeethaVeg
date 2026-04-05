@@ -3,6 +3,7 @@ import Section from '../ui/section'
 import Navbar from '../layout/Navbar'
 import Hero from '../home/Hero'
 import FestivelSpecial from '../home/FestivelSpecial'
+import Clasicfood from '../home/Clasicfood'
 const Homepage = () => {
   return (
     <div>
@@ -10,6 +11,7 @@ const Homepage = () => {
         <Navbar/>
        <Hero/>
        <FestivelSpecial/>
+       <Clasicfood/>
      
     </div>
      

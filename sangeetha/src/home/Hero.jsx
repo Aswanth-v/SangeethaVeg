@@ -1,5 +1,5 @@
 import React from "react";
-import food from "../assets/food.jpg";
+import food from "../assets/food.webp";
 
 const Hero = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import logo from "../assets/sangeetha.jpg";
+import logo from "../assets/sangeetha.webp";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false); // mobile menu
