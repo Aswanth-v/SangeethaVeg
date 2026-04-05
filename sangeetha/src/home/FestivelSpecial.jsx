@@ -1,11 +1,13 @@
-import React from 'react'
+import {React,useState} from 'react'
 import food from "../assets/food.jpg"
-
+import scanner from "../assets/scanner.jpg"
+import badam from "../assets/badam.jpg"
+import SplitText from '../animation/Splittext'
 const FestivelSpecial = () => {
+    const [showQR, setShowQR] = useState(false);
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center bg-fixed flex flex-col md:flex-row"
-      style={{ backgroundImage: `url(${food})` }}
+      className="relative min-h-screen bg-cover bg-center bg-fixed flex flex-col md:flex-row bg-cream"
     >
       
       {/* Overlay */}
@@ -15,24 +17,47 @@ const FestivelSpecial = () => {
       <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center p-10">
         <div className="text-center md:text-left">
           <h2 className="text-3xl font-bold text-white">
-            Order Festive Specials & Classic
+         <SplitText
+  text="Order Festive Specials & Classic"
+  className="text-3xl font-bold text-white"
+/>
           </h2>
 
           <p className="mt-4 text-lg text-white/80">
            🍛 Sangeetha Specials directly from our kitchen 
           </p>
           
-
-          <button className="mt-6 bg-gold text-black px-6 py-3 rounded-lg hover:scale-105 transition">
-            Scan for Order
-          </button>
+<button
+  onClick={() => setShowQR(!showQR)}
+  className="mt-6 bg-gold text-black px-6 py-3 rounded-lg hover:scale-105 transition"
+>
+  {showQR ? "Hide QR" : "Scan for Order"}
+</button>
+          {showQR && (
+  <div className="mt-4 p-4 bg-white/80 backdrop-blur-md rounded-xl shadow-lg w-fit mx-auto md:mx-0">
+    <img
+      src={scanner}
+      alt="QR Code"
+      className="w-40 h-40"
+    />
+    <p className="text-sm text-gray-600 mt-2 text-center">
+      Scan to order 🍛
+    </p>
+  </div>
+)}
         </div>
       </div>
 
       {/* Right - Image / Content */}
-      <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center">
-        <h1 className="text-white text-4xl font-bold">hi</h1>
-      </div>
+     <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center p-6 flex-col">
+  <img
+    src={badam}
+    alt="Badam"
+    className="w-64 md:w-80 rounded-2xl shadow-xl object-cover opacity-85"
+  />
+  <span className='text-cream italic'>#NammaSangeetha</span>
+  <span className='text-gold text-2xl font-bold'>Special Badam Halwa</span>
+</div>
 
     </div>
   )

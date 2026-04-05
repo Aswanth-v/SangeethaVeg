@@ -26,7 +26,11 @@ const Navbar = () => {
 
         {/* Logo + Name */}
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Sangeetha Logo" className="h-10 w-auto rounded-md" />
+         <img 
+  src={logo} 
+  alt="Sangeetha Logo" 
+  className="h-10 w-10 rounded-md object-cover"
+/>
           <h1 className="text-xl md:text-2xl font-bold text-cream">
             Sangeetha
           </h1>
@@ -55,7 +59,7 @@ const Navbar = () => {
             </span>
 
             <ul
-              className={`absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md transition-all duration-300 ${
+              className={`absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md transition-all duration-300 will-change-transform ${
                 desktopMore
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-2"
@@ -87,7 +91,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64  backdrop-blur-lg shadow-lg transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64 will-change-transform   backdrop-blur-lg shadow-lg transform transition-transform duration-300 md:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
