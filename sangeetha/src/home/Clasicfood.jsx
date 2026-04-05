@@ -31,7 +31,7 @@ const Clasicfood = () => {
   const [eveningRef, eveningInView] = useInView({ threshold: 0.2 });
 
   return (
-    <div className="relative min-h-screen bg-cream px-4 sm:px-6 md:px-10 py-12">
+    <div className="relative min-h-screen bg-cream px-4 sm:px-6 md:px-10 py-12" id="menu">
       
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>

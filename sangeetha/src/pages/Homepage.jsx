@@ -1,5 +1,4 @@
-import React from "react";
-import Section from "../ui/section";
+import React, { useRef } from "react";
 import Navbar from "../layout/Navbar";
 import Hero from "../home/Hero";
 import FestivelSpecial from "../home/FestivelSpecial";
@@ -7,16 +6,27 @@ import Clasicfood from "../home/Clasicfood";
 import Services from "../home/Services";
 import DeliveryCTA from "../home/DeliveryCTA";
 import Footer from "../layout/Footer";
+
 const Homepage = () => {
+  const classicFoodRef = useRef(null);
+
+  const scrollToClassicFood = () => {
+    classicFoodRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div>
+    <div className="scroll-smooth">
       <Navbar />
-      <Hero />
+
+      <Hero scrollToClassicFood={scrollToClassicFood} />
       <FestivelSpecial />
-      <Clasicfood />
+      <div ref={classicFoodRef} className="scroll-mt-24">
+        <Clasicfood />
+      </div>
+
       <Services />
-      <DeliveryCTA/>
-     <Footer/>
+      <DeliveryCTA />
+      <Footer />
     </div>
   );
 };
