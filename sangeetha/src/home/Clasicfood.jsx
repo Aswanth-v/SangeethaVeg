@@ -44,7 +44,7 @@ const Clasicfood = () => {
            
               <SplitText
                 text="Our Classic Morning Specials"
-                className="text-2xl sm:text-3xl font-bold text-white text-center mb-8"
+                className="text-2xl sm:text-3xl font-bold text-text text-center mb-8"
               />
            
           )}
@@ -62,7 +62,7 @@ const Clasicfood = () => {
            
               <SplitText
                 text="🌙 Evening Specials"
-                className="text-2xl sm:text-3xl font-bold text-gold text-center mb-8"
+                className="text-2xl sm:text-3xl font-bold text-text text-center mb-8"
               />
             
           )}

@@ -31,13 +31,13 @@ const Navbar = () => {
   alt="Sangeetha Logo" 
   className="h-10 w-10 rounded-md object-cover"
 />
-          <h1 className="text-xl md:text-2xl font-bold text-cream">
+          <h1 className="text-xl md:text-2xl font-bold text-text">
             Sangeetha
           </h1>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-cream font-medium">
+        <ul className="hidden md:flex gap-8 text-text font-medium">
           <li className="cursor-pointer hover:text-primary transition duration-300">
             Home
           </li>

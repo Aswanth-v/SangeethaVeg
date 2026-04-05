@@ -70,7 +70,7 @@ const FestivelSpecial = () => {
           height={320}
           loading="lazy"
         />
-        <span className="text-cream italic">#NammaSangeetha</span>
+        <span className="text-text italic">#NammaSangeetha</span>
         <span className="text-gold text-2xl font-bold">
           Special Badam Halwa
         </span>
