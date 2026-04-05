@@ -2,13 +2,14 @@ import { React, useState, lazy, Suspense } from "react";
 
 import scanner from "../assets/scanner.jpg";
 import badam from "../assets/badam.jpg";
+import { useInView } from "../hook/useInView";
 
 // Lazy load animation (important for TBT)
 const SplitText = lazy(() => import("../animation/Splittext"));
 
 const FestivelSpecial = () => {
   const [showQR, setShowQR] = useState(false);
-
+ const [festivelRef,festivelInview]=useInView({threshold: 0.2 })
   return (
     <div className="relative min-h-screen flex flex-col md:flex-row bg-cream overflow-hidden">
 
@@ -18,16 +19,17 @@ const FestivelSpecial = () => {
 
       {/* Left - Content */}
       <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center p-10">
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left" ref={festivelRef}>
           
-          {/* Lazy animation */}
-          <Suspense fallback={<h2 className="text-3xl font-bold text-white">Loading...</h2>}>
+          {festivelInview && (
+          
+        
             <SplitText
               text="Order Festive Specials & Classic"
               className="text-3xl font-bold text-white"
             />
-          </Suspense>
-
+        
+)}
           <p className="mt-4 text-lg text-white/80">
             🍛 Sangeetha Specials directly from our kitchen
           </p>

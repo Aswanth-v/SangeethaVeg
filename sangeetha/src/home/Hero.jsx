@@ -1,6 +1,6 @@
 import React from "react";
 import food from "../assets/food.webp";
-
+import { useInView } from "../hook/useInView";
 const Hero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
