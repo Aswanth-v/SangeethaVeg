@@ -1,28 +1,28 @@
 import React, { lazy, Suspense, useRef, useEffect, useState } from "react";
-import Navbar from "../layout/Navbar";
-import Hero from "../home/Hero";
+import Navbar from "../layout/Navbar.jsx";
+import Hero from "../home/Hero.jsx";
 // 🔥 Lazy imports (code splitting)
-const FestivelSpecial = lazy(() => import("../home/FestivelSpecial"));
-const Clasicfood = lazy(() => import("../home/Clasicfood"));
-const Services = lazy(() => import("../home/Services"));
-const DeliveryCTA = lazy(() => import("../home/DeliveryCTA"));
-const Footer = lazy(() => import("../layout/Footer"));
-const Faq = lazy(() => import("../home/Faq.jsx"));
+const FestivelSpecial = lazy(() => import("../home/FestivelSpecial.jsx"));
+const Clasicfood = lazy(() => import("../home/Clasicfood.jsx"));
+const Services = lazy(() => import("../home/Services.jsx"));
+const DeliveryCTA = lazy(() => import("../home/DeliveryCTA.jsx"));
+const Footer = lazy(() => import("../layout/Footer.jsx"));
+const Faq = lazy(() => import("../home/Faq.jsx.jsx"));
 const Homepage = () => {
   const classicFoodRef = useRef(null);
 
-  // 🔥 Scroll function
+
   const scrollToClassicFood = () => {
     classicFoodRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // 🔥 Delay loading below-the-fold content (improves LCP)
+
   const [loadBelow, setLoadBelow] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadBelow(true);
-    }, 800); // slight delay for better performance
+    }, 800);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,10 +31,10 @@ const Homepage = () => {
     <div className="scroll-smooth">
       <Navbar />
 
-      {/* 🔥 Hero loads instantly (important for LCP) */}
+      
       <Hero scrollToClassicFood={scrollToClassicFood} />
 
-      {/* 🔥 Load rest after initial render */}
+  
       {loadBelow && (
         <>
           <Suspense fallback={null}>
