@@ -1,21 +1,35 @@
 import { useEffect, useRef } from "react";
-import SplitType from "split-type";
-import { gsap } from "gsap";
 
 const SplitTextAnim = ({ text, className }) => {
   const textRef = useRef();
 
   useEffect(() => {
-    const split = new SplitType(textRef.current, { types: "chars" });
+    let split;
 
-    gsap.from(split.chars, {
-      y: 50,
-      opacity: 0,
-      stagger: 0.05,
-      duration: 1,
+    const observer = new IntersectionObserver(async ([entry]) => {
+      if (entry.isIntersecting) {
+        const SplitType = (await import("split-type")).default;
+        const { gsap } = await import("gsap");
+
+        split = new SplitType(textRef.current, { types: "chars" });
+
+        gsap.from(split.chars, {
+          y: 50,
+          opacity: 0,
+          stagger: 0.05,
+          duration: 1,
+        });
+
+        observer.disconnect();
+      }
     });
 
-    return () => split.revert(); // cleanup
+    observer.observe(textRef.current);
+
+    return () => {
+      observer.disconnect();
+      split?.revert();
+    };
   }, []);
 
   return (

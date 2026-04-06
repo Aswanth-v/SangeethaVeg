@@ -73,6 +73,15 @@ const Clasicfood = () => {
             <Card key={item.id} item={item} />
           ))}
         </div>
+       <div className="flex justify-center"> 
+        <button
+              onClick={() => alert("Redirect to complete menu")}
+              className="mt-4 px-5 py-2 bg-gold text-black font-semibold rounded-lg hover:opacity-90 transition"
+            >
+              See All Items →
+            </button>
+            </div>
+    
 
       </div>
     </div>

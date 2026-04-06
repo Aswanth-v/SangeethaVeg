@@ -76,7 +76,9 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Button */}
-        <button className="hidden md:block bg-gold text-black px-5 py-2 rounded-lg hover:scale-105 hover:shadow-md transition duration-300">
+        <button 
+         onClick={() => alert("Redirect to booking Table")}
+        className="hidden md:block bg-gold text-black px-5 py-2 rounded-lg hover:scale-105 hover:shadow-md transition duration-300">
           Book Table
         </button>
 

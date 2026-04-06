@@ -10,14 +10,14 @@ const Hero = ({scrollToClassicFood }) => {
     <div className="relative h-screen w-full overflow-hidden">
       
       {/* Background Image */}
-      <img
-        src={food}
-        alt="Food"
-        className="absolute inset-0 w-full h-full object-cover scale-105"
-        width={1200}
-        height={800}
-        loading="eager"
-      />
+<img
+  src={food}
+  alt="Food"
+  className="absolute inset-0 w-full h-full object-cover"
+  loading="eager"
+  fetchPriority="high"
+  decoding="async"
+/>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/70"></div>

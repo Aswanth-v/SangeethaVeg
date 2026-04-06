@@ -1,7 +1,7 @@
 import { React, useState, lazy, Suspense } from "react";
 
 import scanner from "../assets/scanner.jpg";
-import badam from "../assets/badam.jpg";
+import badam from "../assets/badam.webp";
 import { useInView } from "../hook/useInView";
 
 // Lazy load animation (important for TBT)
