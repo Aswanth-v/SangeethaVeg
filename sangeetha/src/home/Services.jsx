@@ -3,10 +3,8 @@ import cutting from "../assets/curring.webp";
 const Services = () => {
   return (
     <div className="relative min-h-screen bg-cream px-4 sm:px-6 md:px-10 py-12 overflow-hidden">
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10">
         {/* LEFT */}
         <div className="w-full md:w-1/2 flex items-center justify-center">
@@ -22,7 +20,6 @@ const Services = () => {
 
         {/* RIGHT */}
         <div className="w-full md:w-1/2 flex flex-col justify-center text-white space-y-8">
-          {/* CORPORATE */}
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gold">
               CORPORATE ORDERS & PARTIES
@@ -42,10 +39,8 @@ const Services = () => {
             </button>
           </div>
 
-          {/* DIVIDER */}
           <div className="border-t border-white/20"></div>
 
-          {/* DELIVERY */}
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gold">
               DIRECT DELIVERY

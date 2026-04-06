@@ -22,10 +22,8 @@ const Hero = ({ scrollToClassicFood }) => {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 z-10 bg-black/60"></div>
 
-      {/* Content */}
       <div
         ref={ref}
         className={`relative z-20 flex flex-col items-center justify-center h-full text-center px-6 transition-all duration-700 ${
@@ -34,7 +32,6 @@ const Hero = ({ scrollToClassicFood }) => {
             : "opacity-0 translate-y-6"
         }`}
       >
-        {/* Heading */}
         <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide mb-4">
           Namma Sangeetha
         </h1>
@@ -45,12 +42,10 @@ const Hero = ({ scrollToClassicFood }) => {
           <span className="text-yellow-400 font-semibold">1985</span>.
         </p>
 
-        {/* Tagline */}
         <p className="text-gray-300 italic mb-8">
           From Chennai to the world 🌍
         </p>
 
-        {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <button
             onClick={scrollToClassicFood}
