@@ -2,34 +2,40 @@ import React from "react";
 import food from "../assets/food.webp";
 import { useInView } from "../hook/useInView";
 
-const Hero = ({scrollToClassicFood }) => {
+const Hero = ({ scrollToClassicFood }) => {
   const [ref, isVisible] = useInView();
 
-
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <section
+      className="relative h-screen w-full overflow-hidden"
+      aria-label="Hero section showcasing Namma Sangeetha restaurant"
+    >
       
       {/* Background Image */}
-<img
-  src={food}
-  alt="Food"
-  className="absolute inset-0 w-full h-full object-cover"
-  loading="eager"
-  fetchPriority="high"
-  decoding="async"
-/>
+      <img
+        src={food}
+        alt="South Indian dishes including dosa, idli and meals served at Namma Sangeetha restaurant"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/70"></div>
+      <div className="absolute inset-0 z-10 bg-black/60"></div>
 
       {/* Content */}
       <div
         ref={ref}
-        className={`relative z-10 flex flex-col items-center justify-center h-full text-center px-6 transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        className={`relative z-20 flex flex-col items-center justify-center h-full text-center px-6 transition-all duration-700 ${
+          isVisible !== false
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-6"
         }`}
       >
-        {/* Brand */}
+        {/* Heading */}
         <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide mb-4">
           Namma Sangeetha
         </h1>
@@ -48,17 +54,22 @@ const Hero = ({scrollToClassicFood }) => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <button
-             onClick={scrollToClassicFood}
-          className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition">
+            onClick={scrollToClassicFood}
+            aria-label="Scroll to explore menu section"
+            className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          >
             Explore Menu
           </button>
 
-          <button className="px-6 py-3 border border-white text-white rounded-full hover:bg-white hover:text-black transition">
+          <button
+            aria-label="Order food online"
+            className="px-6 py-3 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-300 focus:outline-none focus:ring-2 focus:ring-white"
+          >
             Order Now
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

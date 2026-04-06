@@ -1,5 +1,4 @@
-import { React, useState, lazy, Suspense } from "react";
-
+import { React, useState, lazy } from "react";
 import scanner from "../assets/scanner.jpg";
 import badam from "../assets/badam.webp";
 import { useInView } from "../hook/useInView";
@@ -9,27 +8,21 @@ const SplitText = lazy(() => import("../animation/Splittext"));
 
 const FestivelSpecial = () => {
   const [showQR, setShowQR] = useState(false);
- const [festivelRef,festivelInview]=useInView({threshold: 0.2 })
+  const [festivelRef, festivelInview] = useInView({ threshold: 0.2 });
   return (
     <div className="relative min-h-screen flex flex-col md:flex-row bg-cream overflow-hidden">
-
-
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Left - Content */}
       <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center p-10">
         <div className="text-center md:text-left" ref={festivelRef}>
-          
           {festivelInview && (
-          
-        
             <SplitText
               text="Order Festive Specials & Classic"
               className="text-3xl font-bold text-white"
             />
-        
-)}
+          )}
           <p className="mt-4 text-lg text-white/80">
             🍛 Sangeetha Specials directly from our kitchen
           </p>

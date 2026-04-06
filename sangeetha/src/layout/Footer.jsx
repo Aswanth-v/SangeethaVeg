@@ -1,15 +1,14 @@
 import React from "react";
-
 const Footer = () => {
   return (
     <footer className="bg-cream text-white px-6 sm:px-10 md:px-16 py-12">
-      
       {/* GRID */}
       <div className="max-w-7xl mx-auto grid gap-8 grid-cols-2 md:grid-cols-4">
-        
         {/* ABOUT */}
         <div>
-          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">About</h3>
+          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">
+            About
+          </h3>
           <ul className="space-y-2 text-xs sm:text-sm text-white/70">
             <li className="hover:text-gold cursor-pointer">About Us</li>
             <li className="hover:text-gold cursor-pointer">Blog</li>
@@ -19,7 +18,9 @@ const Footer = () => {
 
         {/* SERVICES */}
         <div>
-          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">Services</h3>
+          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">
+            Services
+          </h3>
           <ul className="space-y-2 text-xs sm:text-sm text-white/70">
             <li className="hover:text-gold cursor-pointer">Order Directly</li>
             <li className="hover:text-gold cursor-pointer">
@@ -31,7 +32,9 @@ const Footer = () => {
 
         {/* LOCATIONS */}
         <div>
-          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">Locations</h3>
+          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">
+            Locations
+          </h3>
           <ul className="space-y-2 text-xs sm:text-sm text-white/70">
             <li className="hover:text-gold cursor-pointer">Chennai</li>
             <li className="hover:text-gold cursor-pointer">Overseas</li>
@@ -41,7 +44,9 @@ const Footer = () => {
 
         {/* CONNECT */}
         <div>
-          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">Connect</h3>
+          <h3 className="text-gold font-semibold mb-4 text-base sm:text-lg">
+            Connect
+          </h3>
           <ul className="space-y-2 text-xs sm:text-sm text-white/70">
             <li
               className="hover:text-gold cursor-pointer"
@@ -58,7 +63,6 @@ const Footer = () => {
             <li className="hover:text-gold cursor-pointer">Contact</li>
           </ul>
         </div>
-
       </div>
 
       {/* DIVIDER */}
@@ -68,7 +72,6 @@ const Footer = () => {
       <div className="text-center text-xs text-white/50 mt-6">
         ©2026 Sangeetha Veg. Crafted with care.
       </div>
-
     </footer>
   );
 };
