@@ -1,14 +1,13 @@
 import React, { lazy, Suspense, useRef, useEffect, useState } from "react";
 import Navbar from "../layout/Navbar";
 import Hero from "../home/Hero";
-
 // 🔥 Lazy imports (code splitting)
 const FestivelSpecial = lazy(() => import("../home/FestivelSpecial"));
 const Clasicfood = lazy(() => import("../home/Clasicfood"));
 const Services = lazy(() => import("../home/Services"));
 const DeliveryCTA = lazy(() => import("../home/DeliveryCTA"));
 const Footer = lazy(() => import("../layout/Footer"));
-
+const Faq=lazy(()=>import("../home/Faq.jsx"))
 const Homepage = () => {
   const classicFoodRef = useRef(null);
 
@@ -55,7 +54,9 @@ const Homepage = () => {
           <Suspense fallback={null}>
             <DeliveryCTA />
           </Suspense>
-
+          <Suspense fallback={null}>
+            <Faq/>
+          </Suspense>
           <Suspense fallback={null}>
             <Footer />
           </Suspense>
