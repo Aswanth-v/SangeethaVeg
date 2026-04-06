@@ -34,12 +34,12 @@ const Homepage = () => {
       
       <Hero scrollToClassicFood={scrollToClassicFood} />
 
-  
+    <FestivelSpecial />
       {loadBelow && (
         <>
-          <Suspense fallback={null}>
-            <FestivelSpecial />
-          </Suspense>
+        
+            
+          
 
           <div ref={classicFoodRef} className="scroll-mt-24">
             <Suspense fallback={null}>
