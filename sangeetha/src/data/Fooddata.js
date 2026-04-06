@@ -7,7 +7,7 @@ import appam from "../assets/Evening/appam.webp"
 import paneer from "../assets/Evening/paneer.webp"
 import chappathi from "../assets/Evening/chappathi.webp"
 import pavbaji from "../assets/Evening/pavbaji.webp"
-import Puttu from "../assets/Evening/Puttu.webp"
+import Puttu from "../assets/Evening/puttu.webp"
 export const morningItems = [
   {
     id: 1,
