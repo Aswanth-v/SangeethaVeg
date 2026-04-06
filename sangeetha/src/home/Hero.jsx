@@ -10,7 +10,6 @@ const Hero = ({ scrollToClassicFood }) => {
       className="relative h-screen w-full overflow-hidden"
       aria-label="Hero section showcasing Namma Sangeetha restaurant"
     >
-      
       {/* Background Image */}
       <img
         src={food}
@@ -42,7 +41,7 @@ const Hero = ({ scrollToClassicFood }) => {
 
         {/* Subtext */}
         <p className="text-gray-200 text-lg sm:text-xl max-w-2xl mb-4">
-          Serving timeless South Indian classics with uncompromised quality since{" "}
+          Serving timeless South Indian Dishes with uncompromised quality since{" "}
           <span className="text-yellow-400 font-semibold">1985</span>.
         </p>
 
