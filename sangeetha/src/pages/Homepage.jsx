@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useRef, useEffect, useState } from "react";
 import Navbar from "../layout/Navbar.jsx";
 import Hero from "../home/Hero.jsx";
 // 🔥 Lazy imports (code splitting)
-const FestivelSpecial = lazy(() => import("../home/FestivelSpecial.jsx"));
+import FestivelSpecial from "../home/FestivelSpecial.jsx"
 const Clasicfood = lazy(() => import("../home/Clasicfood.jsx"));
 const Services = lazy(() => import("../home/Services.jsx"));
 const DeliveryCTA = lazy(() => import("../home/DeliveryCTA.jsx"));
