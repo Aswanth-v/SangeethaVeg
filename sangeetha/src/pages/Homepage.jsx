@@ -7,7 +7,7 @@ const Clasicfood = lazy(() => import("../home/Clasicfood.jsx"));
 const Services = lazy(() => import("../home/Services.jsx"));
 const DeliveryCTA = lazy(() => import("../home/DeliveryCTA.jsx"));
 const Footer = lazy(() => import("../layout/Footer.jsx"));
-const Faq = lazy(() => import("../home/Faq.jsx.jsx"));
+const Faq = lazy(() => import("../home/Faq.jsx"));
 const Homepage = () => {
   const classicFoodRef = useRef(null);
 
