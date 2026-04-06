@@ -16,7 +16,7 @@ const FloatingContact = () => {
           </p>
           
           <p className="text-sm text-gray-600">
-            📞 +91 98765 43210
+            📞 +91 98765 ***10
           </p>
         </div>
       )}
@@ -24,7 +24,7 @@ const FloatingContact = () => {
       {/* BUTTON */}
       <button
         onClick={() => setOpen(!open)}
-        className="w-14 h-14 rounded-full bg-gold text-black text-xl shadow-lg hover:scale-110 transition"
+        className="w-10 h-10 rounded-full bg-gold text-black text-xl shadow-lg hover:scale-110 transition"
       >
         {open ? "✕" : "?"}
       </button>
